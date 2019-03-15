@@ -16,8 +16,7 @@ func main() {
 		fmt.Print("\n1)夸智慧 2)夸仪态 3)夸口才 4)夸品质\n>>> ")
 		_, err := fmt.Scan(&opt)
 		if err != nil {
-			fmt.Println("I am not playing with you.")
-			return
+			log.Fatalln("I am not playing with you.")
 		}
 
 		shock := readWords("data/惊叹.txt")
@@ -61,13 +60,12 @@ func readWords(filename string) (records [][]string) {
 	f, err := os.Open(filename)
 	if err != nil {
 		log.Fatalln(err)
-		return
 	}
 	reader := csv.NewReader(f)
 	records, err = reader.ReadAll()
 	if err != nil {
 		log.Fatalln(err)
 	}
-	f.Close()
+	_ = f.Close()
 	return
 }
