@@ -8,7 +8,7 @@
 
 # 如何运行
 
-Windows 用户：下载压缩包解压后双击运行 `main.exe`
+Windows 用户：[下载压缩包](https://github.com/jerryshell/kuakua/releases)解压后双击运行 `main.exe`
 
 *nux 用户：克隆源码，`go run main.go`
 
